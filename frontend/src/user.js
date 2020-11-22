@@ -1,6 +1,6 @@
 import React from 'react'
 import Cookies from 'js-cookie'
-import { api } from './Api'
+import { api, googleId } from './Api'
 import { GoogleLogout } from 'react-google-login';
 
 function Profile() {
@@ -68,7 +68,7 @@ function Profile() {
             <img src={ppic} alt="goole profile"></img>
             <button onClick={changeRole}>Switch Role {roleid}</button>
             <GoogleLogout
-                clientId="879295277348-1it13b4u31puv222uq4qutu256r80v9u.apps.googleusercontent.com"
+                clientId={googleId}
                 buttonText="Logout"
                 onLogoutSuccess={res => {
                     logout(res)

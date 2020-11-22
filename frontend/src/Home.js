@@ -1,6 +1,6 @@
 import React from 'react'
 import Cookies from 'js-cookie'
-import { api } from './Api'
+import { api, googleId } from './Api'
 import { Redirect } from 'react-router-dom'
 import GoogleLogin from 'react-google-login';
 function Home() {
@@ -67,7 +67,7 @@ function Home() {
             /* <div class="g-signin2" data-onsuccess={onGoogleSignIn}></div> */
             //return <button onClick={test}>HHH</button>
             return <><div><GoogleLogin
-                clientId={'879295277348-1it13b4u31puv222uq4qutu256r80v9u.apps.googleusercontent.com'}
+                clientId={googleId}
                 onSuccess={res => {
                     onGoogleSignIn(res)
                 }}
