@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<report>
+
+  <header>
+    <generated>Fri Nov 20 23:42:37 2020</generated>
+    <server>PAM-Working (somes-8229:3456)</server>
+    <database>test</database>
+    <schema>public</schema>
+    <title>Table Data dictionary report - userrolemapping</title>
+  </header>
+
+  <section id="s1" number="1" name="Columns">
+    <table>
+      <columns>
+        <column id="c1" number="1" name="Name"/>
+        <column id="c2" number="2" name="Data type"/>
+        <column id="c3" number="3" name="Not Null?"/>
+        <column id="c4" number="4" name="Primary key?"/>
+        <column id="c5" number="5" name="Default"/>
+        <column id="c6" number="6" name="Comment"/>
+      </columns>
+      <rows>
+        <row id="r1" number="1" c1="user_id" c2="bigint" c3="Yes" c4="Yes" c5="" c6="" />
+        <row id="r2" number="2" c1="role_id" c2="bigint" c3="No" c4="No" c5="" c6="" />
+      </rows>
+    </table>
+  </section>
+
+  <section id="s2" number="2" name="Constraints">
+    <table>
+      <columns>
+        <column id="c1" number="1" name="Name"/>
+        <column id="c2" number="2" name="Type"/>
+        <column id="c3" number="3" name="Definition"/>
+        <column id="c4" number="4" name="Comment"/>
+      </columns>
+      <rows>
+        <row id="r1" number="1" c1="userrolemapping_pkey" c2="Primary key" c3="(user_id)" c4="" />
+        <row id="r2" number="2" c1="fk_role" c2="Foreign key" c3="(role_id)
+      REFERENCES public.approles (role_id) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE CASCADE" c4="" />
+        <row id="r3" number="3" c1="fk_user" c2="Foreign key" c3="(user_id)
+      REFERENCES public.appuser (user_id) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE CASCADE" c4="" />
+      </rows>
+    </table>
+  </section>
+
+</report>

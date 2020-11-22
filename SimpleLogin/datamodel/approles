@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<report>
+
+  <header>
+    <generated>Fri Nov 20 23:37:17 2020</generated>
+    <server>PAM-Working (somes-8229:3456)</server>
+    <database>test</database>
+    <schema>public</schema>
+    <title>Table Data dictionary report - approles</title>
+  </header>
+
+  <section id="s1" number="1" name="Columns">
+    <table>
+      <columns>
+        <column id="c1" number="1" name="Name"/>
+        <column id="c2" number="2" name="Data type"/>
+        <column id="c3" number="3" name="Not Null?"/>
+        <column id="c4" number="4" name="Primary key?"/>
+        <column id="c5" number="5" name="Default"/>
+        <column id="c6" number="6" name="Comment"/>
+      </columns>
+      <rows>
+        <row id="r1" number="1" c1="role_id" c2="integer" c3="Yes" c4="Yes" c5="nextval(&#39;approles_role_id_seq&#39;::regclass)" c6="" />
+        <row id="r2" number="2" c1="role_common_name" c2="character varying(255)" c3="Yes" c4="No" c5="" c6="" />
+      </rows>
+    </table>
+  </section>
+
+  <section id="s2" number="2" name="Constraints">
+    <table>
+      <columns>
+        <column id="c1" number="1" name="Name"/>
+        <column id="c2" number="2" name="Type"/>
+        <column id="c3" number="3" name="Definition"/>
+        <column id="c4" number="4" name="Comment"/>
+      </columns>
+      <rows>
+        <row id="r1" number="1" c1="approles_pkey" c2="Primary key" c3="(role_id)" c4="" />
+        <row id="r2" number="2" c1="approles_role_common_name_key" c2="Unique" c3="(role_common_name)" c4="" />
+      </rows>
+    </table>
+  </section>
+
+</report>
