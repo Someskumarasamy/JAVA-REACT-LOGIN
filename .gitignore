@@ -40,3 +40,6 @@ somes.txt
 /SimpleLogin/build/*
 /SimpleLogin/WebContent/static
 package-lock.json
+/SimpleLogin/.settings
+/SimpleLogin/.classpath
+/SimpleLogin/.project
